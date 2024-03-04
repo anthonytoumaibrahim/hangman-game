@@ -69,6 +69,7 @@ function guessLetter(letter = "") {
       case 6:
         rightLeg();
         alert(`Sorry, you lost! The word was: ${randomWord}.`);
+        pickRandomWord();
         break;
     }
     return;
@@ -87,6 +88,7 @@ function guessLetter(letter = "") {
   // Solved the whole word
   if (solvedLetters.length === randomWordLength) {
     alert("Congrats! You got it right.");
+    setTimeout(() => pickRandomWord(), 2000);
   }
 }
 
